@@ -33,14 +33,14 @@ function renderTask(text, isCompleted) {
   buttonsDiv.className = "buttons";
 
   const completeBtn = document.createElement("button");
-  completeBtn.textContent = "completed✔";
+  completeBtn.textContent = "completed";
   completeBtn.onclick = () => {
     li.classList.toggle("completed");
     saveToLocalStorage();
   };
 
   const editBtn = document.createElement("button");
-  editBtn.textContent = "Edit✏";
+  editBtn.textContent = "Edit";
   editBtn.onclick = () => {
     const newText = prompt("Edit your task:", span.textContent);
     if (newText !== null && newText.trim() !== "") {
@@ -50,7 +50,7 @@ function renderTask(text, isCompleted) {
   };
 
   const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete🗑";
+  deleteBtn.textContent = "Delete";
   deleteBtn.onclick = () => {
     taskList.removeChild(li);
     saveToLocalStorage();
